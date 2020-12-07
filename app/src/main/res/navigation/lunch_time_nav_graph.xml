@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" android:id="@+id/lunch_time_nav_graph"
+    app:startDestination="@id/lunchFragment">
+
+    <fragment
+        android:id="@+id/lunchFragment"
+        android:name="com.android.eexpo.ui.home.lunchtime.LunchFragment"
+        android:label="LunchFragment" />
+</navigation>

@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.home.HomeActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/topView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/story_bottom_curved"
+            android:padding="@dimen/dimen_8_dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+
+            <ImageView
+                android:id="@+id/locationIcon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dimen_8_dp"
+                android:layout_marginTop="@dimen/dimen_16_dp"
+                android:src="@drawable/location"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/point"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/dimen_8_dp"
+                android:text="Work"
+                android:textColor="@color/white"
+                android:textSize="@dimen/font_20_sp"
+                app:layout_constraintStart_toEndOf="@+id/locationIcon"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/location"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/dimen_4_dp"
+                android:text="Edapally, 682024"
+                android:textColor="@color/white"
+                app:layout_constraintStart_toEndOf="@+id/locationIcon"
+                app:layout_constraintTop_toBottomOf="@+id/point" />
+
+
+            <fragment
+                android:id="@+id/story_nav_fragment"
+                android:name="androidx.navigation.fragment.NavHostFragment"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen_8_dp"
+                android:layout_marginStart="@dimen/dimen_8_dp"
+                android:layout_marginBottom="@dimen/dimen_8_dp"
+                app:layout_constraintTop_toBottomOf="@+id/location"
+                app:navGraph="@navigation/story_nav_graph" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <include layout="@layout/search_layout" />
+
+        <fragment
+            android:id="@+id/category_nav_fragment"
+            android:name="androidx.navigation.fragment.NavHostFragment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/searchView"
+            app:navGraph="@navigation/category_nav_graph" />
+
+        <fragment
+            android:id="@+id/exhibition_nav_fragment"
+            android:name="androidx.navigation.fragment.NavHostFragment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen_8_dp"
+            android:layout_marginStart="@dimen/dimen_8_dp"
+            android:layout_marginBottom="@dimen/dimen_8_dp"
+            app:layout_constraintTop_toBottomOf="@+id/category_nav_fragment"
+            app:navGraph="@navigation/exhibition_nav_graph" />
+
+        <fragment
+            android:id="@+id/offer_nav_fragment"
+            android:name="androidx.navigation.fragment.NavHostFragment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen_8_dp"
+            android:layout_marginStart="@dimen/dimen_8_dp"
+            android:layout_marginBottom="@dimen/dimen_8_dp"
+            app:layout_constraintTop_toBottomOf="@+id/exhibition_nav_fragment"
+            app:navGraph="@navigation/offer_nav_graph" />
+
+        <fragment
+            android:id="@+id/shops_nav_fragment"
+            android:name="androidx.navigation.fragment.NavHostFragment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen_8_dp"
+            android:layout_marginStart="@dimen/dimen_8_dp"
+            android:layout_marginBottom="@dimen/dimen_8_dp"
+            app:layout_constraintTop_toBottomOf="@+id/offer_nav_fragment"
+            app:navGraph="@navigation/shops_nav_graph" />
+
+
+
+        <fragment
+            android:id="@+id/hot_deal_nav_fragment"
+            android:name="androidx.navigation.fragment.NavHostFragment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen_8_dp"
+            android:layout_marginStart="@dimen/dimen_8_dp"
+            android:layout_marginEnd="@dimen/dimen_8_dp"
+            app:layout_constraintTop_toBottomOf="@+id/shops_nav_fragment"
+            app:navGraph="@navigation/hotdeals_nav_graph" />
+
+        <fragment
+            android:id="@+id/new_arrival_nav_fragment"
+            android:name="androidx.navigation.fragment.NavHostFragment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen_8_dp"
+            android:layout_marginStart="@dimen/dimen_8_dp"
+            android:layout_marginBottom="@dimen/dimen_8_dp"
+            app:layout_constraintTop_toBottomOf="@+id/hot_deal_nav_fragment"
+            app:navGraph="@navigation/new_arrival_nav_host" />
+
+        <fragment
+            android:id="@+id/expo_pick_nav_fragment"
+            android:name="androidx.navigation.fragment.NavHostFragment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/new_arrival_nav_fragment"
+            app:navGraph="@navigation/expo_pick_nav_graph" />
+
+        <fragment
+            android:id="@+id/lunch_time_nav_fragment"
+            android:name="androidx.navigation.fragment.NavHostFragment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/expo_pick_nav_fragment"
+            app:navGraph="@navigation/lunch_time_nav_graph" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.core.widget.NestedScrollView>

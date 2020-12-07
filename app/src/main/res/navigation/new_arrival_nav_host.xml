@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" android:id="@+id/new_arrival_nav_host"
+    app:startDestination="@id/newArriavlFragment">
+
+    <fragment
+        android:id="@+id/newArriavlFragment"
+        android:name="com.android.eexpo.ui.home.newarrivals.NewArriavlFragment"
+        android:label="NewArriavlFragment" />
+</navigation>

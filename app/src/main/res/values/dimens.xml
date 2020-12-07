@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="font_15_sp">15sp</dimen>
+    <dimen name="font_20_sp">20sp</dimen>
+    <dimen name="dimen_8_dp">8dp</dimen>
+    <dimen name="dimen_16_dp">16dp</dimen>
+    <dimen name="dimen_20_dp">20dp</dimen>
+    <dimen name="dimen_10_dp">10dp</dimen>
+    <dimen name="dimen_76_dp">76dp</dimen>
+    <dimen name="dimen_100_dp">100dp</dimen>
+    <dimen name="dimen_120_dp">120dp</dimen>
+    <dimen name="font_18_sp">18sp</dimen>
+    <dimen name="dimen_46_dp">46dp</dimen>
+    <dimen name="dimen_150_dp">150dp</dimen>
+    <dimen name="dimen_180_dp">180dp</dimen>
+    <dimen name="dimen_320_dp">320dp</dimen>
+    <dimen name="dimen_350_dp">350dp</dimen>
+    <dimen name="dimen_4_dp">4dp</dimen>
+</resources>
